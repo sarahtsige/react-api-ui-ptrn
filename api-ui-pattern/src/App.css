@@ -33,8 +33,33 @@ button {
   font-size: 20px;
   width: 600px;
   height: 50px;
+  /* display: block; */
 }
 
+.App-Accordian{
+  display: block;
+  margin: 0 auto;
+}
+
+#rick {
+  display: none;
+}
+
+#morty{
+  display: none;
+}
+
+#summer{
+  display: none;
+}
+
+#beth{
+  display: none;
+}
+
+#jerry{
+  display: none;
+}
 
 @keyframes App-logo-spin {
   from {

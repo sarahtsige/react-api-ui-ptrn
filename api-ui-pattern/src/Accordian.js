@@ -25,13 +25,61 @@ class Accordian extends Component {
 
 
 
-  displayCharacter(e){
-console.log('Click Works')
-console.log(e.target.data)
+displayCharacter(e){
+//set display for that div to block
+var r = document.getElementById('rick')
+if (r.style.display === "none") {
+  r.style.display = "block";
+} else {
+  r.style.display = "none";
+}
+}
+
+displayCharacter1(e){
+  //set display for that div to block
+  var m = document.getElementById('morty')
+  if (m.style.display === "none") {
+    m.style.display = "block";
+  } else {
+    m.style.display = "none";
+  }
   }
 
+
+  displayCharacter2(e){
+    //set display for that div to block
+    var s = document.getElementById('summer')
+    if (s.style.display === "none") {
+      s.style.display = "block";
+    } else {
+      s.style.display = "none";
+    }
+    }
+
+
+    displayCharacter3(e){
+      //set display for that div to block
+      var b = document.getElementById('beth')
+      if (b.style.display === "none") {
+        b.style.display = "block";
+      } else {
+        b.style.display = "none";
+      }
+      }
+
+      displayCharacter4(e){
+        //set display for that div to block
+        var j = document.getElementById('jerry')
+        if (j.style.display === "none") {
+          j.style.display = "block";
+        } else {
+          j.style.display = "none";
+        }
+        }
+
+
   render() {
-    let characterInfo = this.state.data.map(i => <p>{i.name}</p>);
+    // let characterInfo = this.state.data.map(i => <p>{i.name}</p>);
 
     
 
@@ -47,7 +95,7 @@ console.log(e.target.data)
           <div className="App-Accordian">
             <button onClick={this.displayCharacter} className="App-button"> RICK </button>
             <div id="rick">
-              {/* {this.characterNames2} */}
+              {/* {this.characterNames2}  */}
               {/* {characterInfo} */}
               
               <img src={this.state.data[0].image} alt="character"></img>
@@ -57,7 +105,7 @@ console.log(e.target.data)
               <p>Status: {this.state.data[0].status}</p>
             </div>
 
-            <button className="App-button"> MORTY</button>
+            <button onClick={this.displayCharacter1} className="App-button"> MORTY</button>
             <div id="morty">
             
               <img src={this.state.data[1].image} alt="character"></img>
@@ -67,7 +115,7 @@ console.log(e.target.data)
               <p>Status: {this.state.data[1].status}</p>
             </div>
 
-            <button className="App-button"> SUMMER</button>
+            <button onClick={this.displayCharacter2} className="App-button"> SUMMER</button>
             <div id="summer">
 
            
@@ -78,7 +126,7 @@ console.log(e.target.data)
               <p>Status: {this.state.data[2].status}</p>
             </div>
 
-            <button className="App-button"> BETH</button>
+            <button onClick={this.displayCharacter3} className="App-button"> BETH</button>
             <div id="beth">
            
               <img src={this.state.data[3].image} alt="character"></img>
@@ -88,7 +136,7 @@ console.log(e.target.data)
               <p>Status: {this.state.data[3].status}</p>
             </div>
 
-            <button className="App-button"> JERRY</button>
+            <button onClick={this.displayCharacter4} className="App-button"> JERRY</button>
             <div id="jerry">
           
               <img src={this.state.data[4].image} alt="character"></img>
